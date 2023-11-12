@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Bereken Boete";
+}
+
+<form method="post" asp-action="BerekenBoete">
+    <div><input type="text" name="gemetenSnelheid" placeholder="snelheid" required /></div>
+    <br />
+    <div><input type="submit" value="Bereken de boete" /></div><br />
+</form>
+
+@if (ViewData["Resultaat"] != null)
+{
+    <div>Resultaat: @ViewData["Resultaat"]</div>
+}
